@@ -4,12 +4,16 @@ theme: default
 paginate: true
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
+header: '**Fondamentaux des Réseaux** | CESI'
+footer: 'Rohan Fossé | 2026'
 style: |
   section {
     font-size: 28px;
   }
   h1 {
     color: #0066cc;
+    border-bottom: 3px solid #0066cc;
+    padding-bottom: 10px;
   }
   h2 {
     color: #0088ff;
@@ -19,20 +23,104 @@ style: |
   }
   table {
     font-size: 22px;
+    border-collapse: collapse;
+  }
+  table th {
+    background-color: #0066cc;
+    color: white;
+    padding: 8px;
+  }
+  table td {
+    padding: 6px;
+    border: 1px solid #ddd;
   }
   code {
     background: #f4f4f4;
     padding: 2px 6px;
     border-radius: 3px;
   }
+  header {
+    color: #0066cc;
+    font-size: 18px;
+    padding: 10px;
+  }
+  footer {
+    color: #666;
+    font-size: 16px;
+  }
+  section::after {
+    content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-size: 18px;
+    color: #0066cc;
+    font-weight: bold;
+  }
+  section.invert::after {
+    color: white;
+  }
+  /* Barre de progression en haut */
+  section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #e0e0e0;
+    z-index: 1000;
+  }
+  /* Remplissage progressif - sera calculé par slide */
+  section[data-marpit-pagination="1"]::before { background: linear-gradient(to right, #0066cc 3%, #e0e0e0 3%); }
+  section[data-marpit-pagination="2"]::before { background: linear-gradient(to right, #0066cc 6%, #e0e0e0 6%); }
+  section[data-marpit-pagination="3"]::before { background: linear-gradient(to right, #0066cc 9%, #e0e0e0 9%); }
+  section[data-marpit-pagination="4"]::before { background: linear-gradient(to right, #0066cc 12%, #e0e0e0 12%); }
+  section[data-marpit-pagination="5"]::before { background: linear-gradient(to right, #0066cc 15%, #e0e0e0 15%); }
+  section[data-marpit-pagination="6"]::before { background: linear-gradient(to right, #0066cc 18%, #e0e0e0 18%); }
+  section[data-marpit-pagination="7"]::before { background: linear-gradient(to right, #0066cc 21%, #e0e0e0 21%); }
+  section[data-marpit-pagination="8"]::before { background: linear-gradient(to right, #0066cc 24%, #e0e0e0 24%); }
+  section[data-marpit-pagination="9"]::before { background: linear-gradient(to right, #0066cc 27%, #e0e0e0 27%); }
+  section[data-marpit-pagination="10"]::before { background: linear-gradient(to right, #0066cc 30%, #e0e0e0 30%); }
+  section[data-marpit-pagination="11"]::before { background: linear-gradient(to right, #0066cc 33%, #e0e0e0 33%); }
+  section[data-marpit-pagination="12"]::before { background: linear-gradient(to right, #0066cc 36%, #e0e0e0 36%); }
+  section[data-marpit-pagination="13"]::before { background: linear-gradient(to right, #0066cc 39%, #e0e0e0 39%); }
+  section[data-marpit-pagination="14"]::before { background: linear-gradient(to right, #0066cc 42%, #e0e0e0 42%); }
+  section[data-marpit-pagination="15"]::before { background: linear-gradient(to right, #0066cc 45%, #e0e0e0 45%); }
+  section[data-marpit-pagination="16"]::before { background: linear-gradient(to right, #0066cc 48%, #e0e0e0 48%); }
+  section[data-marpit-pagination="17"]::before { background: linear-gradient(to right, #0066cc 51%, #e0e0e0 51%); }
+  section[data-marpit-pagination="18"]::before { background: linear-gradient(to right, #0066cc 54%, #e0e0e0 54%); }
+  section[data-marpit-pagination="19"]::before { background: linear-gradient(to right, #0066cc 57%, #e0e0e0 57%); }
+  section[data-marpit-pagination="20"]::before { background: linear-gradient(to right, #0066cc 60%, #e0e0e0 60%); }
+  section[data-marpit-pagination="21"]::before { background: linear-gradient(to right, #0066cc 63%, #e0e0e0 63%); }
+  section[data-marpit-pagination="22"]::before { background: linear-gradient(to right, #0066cc 66%, #e0e0e0 66%); }
+  section[data-marpit-pagination="23"]::before { background: linear-gradient(to right, #0066cc 69%, #e0e0e0 69%); }
+  section[data-marpit-pagination="24"]::before { background: linear-gradient(to right, #0066cc 72%, #e0e0e0 72%); }
+  section[data-marpit-pagination="25"]::before { background: linear-gradient(to right, #0066cc 75%, #e0e0e0 75%); }
+  section[data-marpit-pagination="26"]::before { background: linear-gradient(to right, #0066cc 78%, #e0e0e0 78%); }
+  section[data-marpit-pagination="27"]::before { background: linear-gradient(to right, #0066cc 81%, #e0e0e0 81%); }
+  section[data-marpit-pagination="28"]::before { background: linear-gradient(to right, #0066cc 84%, #e0e0e0 84%); }
+  section[data-marpit-pagination="29"]::before { background: linear-gradient(to right, #0066cc 87%, #e0e0e0 87%); }
+  section[data-marpit-pagination="30"]::before { background: linear-gradient(to right, #0066cc 90%, #e0e0e0 90%); }
+  section[data-marpit-pagination="31"]::before { background: linear-gradient(to right, #0066cc 93%, #e0e0e0 93%); }
+  section[data-marpit-pagination="32"]::before { background: linear-gradient(to right, #0066cc 96%, #e0e0e0 96%); }
+  section[data-marpit-pagination="33"]::before { background: linear-gradient(to right, #0066cc 100%, #e0e0e0 100%); }
 ---
 
 <!-- _class: invert -->
+<!-- _header: "" -->
+<!-- _footer: "" -->
+<!-- _paginate: false -->
+
 # Projet Réseau
 ## Rohan Fossé
 
 ### Module : Fondamentaux des Réseaux
 De la théorie à la pratique
+
+---
+
+#### Janvier 2026
 
 ---
 
