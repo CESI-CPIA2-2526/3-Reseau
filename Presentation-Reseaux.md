@@ -304,7 +304,7 @@ Physique       → BITS
 
 ---
 
-# Adressage MAC
+# Adressage MAC - Media Access Control
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
 
@@ -347,7 +347,7 @@ Physique       → BITS
 
 ---
 
-# Protocole ARP
+# Protocole ARP - Address Resolution Protocol
 
 **Problème** : Connaît IP, besoin MAC
 **Solution** : ARP = IP ↔ MAC
@@ -493,7 +493,7 @@ interface gi0/1
 
 ---
 
-# DNS
+# DNS - Domain Name System
 
 **Fonction** : Nom → IP
 `www.google.com` → `142.250.74.206`
@@ -530,7 +530,7 @@ interface gi0/1
 
 ---
 
-# DHCP
+# DHCP - Dynamic Host Configuration Protocol
 
 **Fonction** : Attribution auto IP
 
